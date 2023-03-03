@@ -1,0 +1,13 @@
+[package]
+name = "az_app_secrets"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.64"
+az_app_secrets_new_macro = { path="src/az_app_secrets_new_macro" }
+az_app_secrets_new_macro_derive = { path="src/az_app_secrets_new_macro/az_app_secrets_new_macro_derive" }
+az_app_secrets_init_macro = { path="src/az_app_secrets_init_macro" }
+az_app_secrets_init_macro_derive = { path="src/az_app_secrets_init_macro/az_app_secrets_init_macro_derive" }
