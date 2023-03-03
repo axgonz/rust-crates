@@ -1,3 +1,3 @@
-pub trait Init {
+pub trait AzAppVariablesInit {
     fn init(me: &mut Self);
 }

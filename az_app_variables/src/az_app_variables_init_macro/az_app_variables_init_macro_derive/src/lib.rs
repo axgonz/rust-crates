@@ -8,7 +8,7 @@ use syn::{
     Fields,
 };
 
-#[proc_macro_derive(Init)]
+#[proc_macro_derive(AzAppVariablesInit)]
 pub fn macro_derive(input: TokenStream) -> TokenStream {
     // Construct a representation of Rust code as a syntax tree
     //  that we can manipulate
@@ -37,7 +37,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
     });
 
     quote! {
-        impl Init for #struct_name {
+        impl AzAppVariablesInit for #struct_name {
             fn init(me: &mut Self) {
                 #(#prop_new_q)*
             }
