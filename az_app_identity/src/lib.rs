@@ -1,13 +1,12 @@
-use std::{
-    env,
-    sync::Arc
-};
+pub use sync::Arc
 pub use azure_identity::{
     DefaultAzureCredential, 
     DefaultAzureCredentialEnum, 
     AzureCliCredential, 
     ImdsManagedIdentityCredential
 };
+
+use std::env
 
 #[derive(Clone)]
 pub struct AppIdentity {}
