@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-app_variables_new_macro = { path="app_variables_new_macro" }
-app_variables_new_macro_derive = { path="app_variables_new_macro/app_variables_new_macro_derive" }
-app_variables_init_macro = { path="app_variables_init_macro" }
-app_variables_init_macro_derive = { path="app_variables_init_macro/app_variables_init_macro_derive" }
+app_variables_new_macro = { path="src/app_variables_new_macro" }
+app_variables_new_macro_derive = { path="src/app_variables_new_macro/app_variables_new_macro_derive" }
+app_variables_init_macro = { path="src/app_variables_init_macro" }
+app_variables_init_macro_derive = { path="src/app_variables_init_macro/app_variables_init_macro_derive" }

@@ -32,10 +32,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
         let field_name = f.ident;
 
         quote! {
-            me.#field_name = match Self::get_from_cfg(&stringify!(#field_name).to_uppercase()) {
-                Ok(variable) => variable,
-                Err(_) => Self::get_from_env(&stringify!(#field_name).to_uppercase())
-            }
+            me.#field_name = Self::get_from_env(&stringify!(#field_name).to_uppercase())
         }
     });
 
