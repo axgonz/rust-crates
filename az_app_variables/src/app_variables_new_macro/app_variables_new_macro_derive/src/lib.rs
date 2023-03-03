@@ -37,7 +37,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
     });
 
     quote! {
-        impl GetFromEnv for #struct_name
+        impl GetFromEnv for #struct_name {}
         impl New for #struct_name {
             fn new() -> Self {
                 Self {
