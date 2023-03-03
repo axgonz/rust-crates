@@ -1,4 +1,4 @@
-use app_variables::*;
+use az_app_variables::*;
 
 #[derive(New, Init, Debug)]
 pub struct AppVariables {
@@ -17,7 +17,7 @@ fn main() {
          export AZURE_KEYVAULT_NAME=myKvName
          export AZURE_STORAGEACCOUNT_NAME=myStName
     */
-    let mut app_vars = AppVariables::new();
-    AppVariables::init(&mut app_vars);
-    println!("\n{:#?}\n", app_vars);
+    let mut app_variables = AppVariables::new();
+    AppVariables::init(&mut app_variables);
+    println!("\n{:#?}\n", app_variables);
 }
