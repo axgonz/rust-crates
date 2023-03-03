@@ -1,4 +1,4 @@
-pub use sync::Arc;
+pub use std::sync::Arc;
 pub use azure_identity::{
     DefaultAzureCredential, 
     DefaultAzureCredentialEnum, 
