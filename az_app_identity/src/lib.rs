@@ -24,7 +24,7 @@ impl AppIdentity {
         */  
         let credential_sources = match env::var("AZURE_CLIENT_ID") {
             Ok(azure_client_id) => {
-                println!("[az_app_identity] AZURE_CLIENT_ID is set, will try to use User Assigned Managed Identity");
+                println!("[az_app_identity] AZURE_CLIENT_ID is set, will try to use User Assigned Managed Identity and then Azure Cli");
                 vec![
                     DefaultAzureCredentialEnum::ManagedIdentity(
                         ImdsManagedIdentityCredential::default()
@@ -36,7 +36,7 @@ impl AppIdentity {
                 ]
             },
             Err(_) => {
-                println!("[az_app_identity] AZURE_CLIENT_ID is unset, will try to use System Assigned Managed Identity");
+                println!("[az_app_identity] AZURE_CLIENT_ID is unset, will try to use System Assigned Managed Identity and then Azure Cli");
                 vec![
                     DefaultAzureCredentialEnum::ManagedIdentity(
                         ImdsManagedIdentityCredential::default()
