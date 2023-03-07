@@ -39,7 +39,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
     quote! {
         impl AzAppVariablesGetFromEnv for #struct_name {}
         impl AzAppVariablesNew for #struct_name {
-            fn new() -> Self {
+            pub fn new() -> Self {
                 Self {
                     #(#prop_new_q)*
                 }

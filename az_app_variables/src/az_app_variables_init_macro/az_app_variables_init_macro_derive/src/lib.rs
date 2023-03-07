@@ -38,7 +38,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
 
     quote! {
         impl AzAppVariablesInit for #struct_name {
-            fn init(me: &mut Self) {
+            pub fn init(me: &mut Self) {
                 #(#prop_new_q)*
             }
         }
