@@ -38,9 +38,9 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
 
     quote! {
         #[async_trait]
-        impl GetFromKeyVault for #struct_name {}
+        impl AzAppSecretsGetFromKeyVault for #struct_name {}
         impl AzAppSecretsNew for #struct_name {
-            fn new() -> Self {
+            pub fn new() -> Self {
                 Self {
                     #(#prop_new_q)*
                 }

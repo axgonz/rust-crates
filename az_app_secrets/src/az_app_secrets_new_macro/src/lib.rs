@@ -9,7 +9,7 @@ pub trait AzAppSecretsNew {
 }
 
 #[async_trait]
-pub trait GetFromKeyVault {
+pub trait AzAppSecretsGetFromKeyVault {
     async fn get_from_key_vault(name: &str, vault_name: &str, credential: Arc<DefaultAzureCredential>) -> String {
         let vault_uri = format!("https://{}.vault.azure.net", vault_name);
         let secret_client = SecretClient::new(&vault_uri, credential).unwrap();
