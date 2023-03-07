@@ -43,7 +43,7 @@ fn impl_macro(ast: syn::DeriveInput) -> TokenStream {
     quote! {
         #[async_trait]
         impl AzAppSecretsInit for #struct_name {
-            pub async fn init(me: &mut Self, vault_name: &str, credential: Arc<DefaultAzureCredential>) {
+            async fn init(me: &mut Self, vault_name: &str, credential: Arc<DefaultAzureCredential>) {
                 #(#prop_new_q)*
             }
         }
